@@ -2,9 +2,9 @@
 """Let's duck type an iterable object"""
 
 
-from typing import List, Any, Tuple
+from typing import Sequence, Iterable, List, Tuple
 
 
-def element_length(lst: List[List[Any]]) -> List[Tuple[List[Any], int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """Gets elements and their lens"""
     return [(i, len(i)) for i in lst]
