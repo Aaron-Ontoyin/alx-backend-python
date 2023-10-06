@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if ! grep -q "^#!/usr/bin/env python3" "$1"; then
+    sed -i '1i#!/usr/bin/env python3' "$1"
+fi
+
 chmod u+x "$1"
 if [ $? -ne 0 ]; then
     exit 1
