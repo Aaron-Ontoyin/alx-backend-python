@@ -2,20 +2,20 @@
 """
 Type Checking Module. Advanced for function zoom Array
 """
-from typing import Sequence, Generator, Any
+from typing import List, Generator, Any
 
 
-def zoom_array(lst: Sequence[int], factor: int = 2) -> Sequence[Any]:
+def zoom_array(lst: List[int], factor: int = 2) -> List[Any]:
     """Zoom Array function: Zooms an array factor times"""
-    zoomed_in: Sequence[Any] = [
+    zoomed_in: List[Any] = [
         item for item in lst
         for i in range(int(factor))
     ]
     return zoomed_in
 
 
-array: Sequence[int] = [12, 72, 91]
+array: List[int] = [12, 72, 91]
 
-zoom_2x: Sequence[Any] = zoom_array(array)
+zoom_2x: List[Any] = zoom_array(array)
 
-zoom_3x: Sequence[Any] = zoom_array(array, 3)
+zoom_3x: List[Any] = zoom_array(array, 3)
