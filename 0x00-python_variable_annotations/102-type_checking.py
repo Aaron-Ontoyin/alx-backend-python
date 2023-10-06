@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Type Checking"""
+"""
+Type Checking Module. Advanced for function zoom Array
+"""
 from typing import List, Generator, Any
 
 
 def zoom_array(lst: List[int], factor: float = 2) -> List[Any]:
-    """Zoom Array"""
+    """Zoom Array function: Zooms an array factor times"""
     zoomed_in: List[Any] = [
         item for item in lst
         for i in range(int(factor))
