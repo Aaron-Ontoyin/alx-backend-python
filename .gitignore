@@ -1,0 +1,15 @@
+*env/
+*~
+*.swp
+.DS_Store
+.idea
+__pycache__/
+*.egg-info/
+*.egg
+*.log
+*.out
+*.pid
+*.coverage
+*.cache
+*.pyc
+*.pyo
