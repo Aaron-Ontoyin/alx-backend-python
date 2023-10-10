@@ -2,12 +2,9 @@
 """ Let's execute multiple coroutines at the same time with async"""
 
 import asyncio
+from typing import List
 
 wait_random = __import__("0-basic_async_syntax").wait_random
-
-
-import asyncio
-from typing import List
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
@@ -21,9 +18,10 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Returns:
     - List[float]: a list of the delays for each wait_random coroutine.
 
-    This function creates n tasks, each running the wait_random coroutine with the specified max_delay.
-    The tasks are added to a list and then executed concurrently using asyncio.as_completed.
-    The delays for each task are then appended to a list and returned.
+    This function creates n tasks, each running the wait_random coroutine
+    with the specified max_delay. The tasks are added to a list and then
+    executed concurrently using asyncio.as_completed. The delays for each
+    task are then appended to a list and returned.
     """
     delays = []
     tasks = []
